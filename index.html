@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calories Calculatrice</title>
+    <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form id="calculatorForm">
-        <label for="fats">Lipides:</label>
-        <input id="fats" name="fats" type="text" name="fats">
-        <label for="carbs">Glucides:</label>
-        <input id="carbs" name="carbs" type="carbs" name="fats">
-        <label for="prots">Proteines:</label>
-        <input id="prots" name="prots" type="text" name="fats">
-        <label for="fibers">Fibres:</label>
-        <input id="fibers" name="fibers" type="text" name="fats">
-        <input id="submitButton" type="submit" value="Submit">
-  </form>
-    <div>
-        <p id="output">Calories :</p>
-    </div>
+    <h1>Calories Calculator</h1>
+      <form id="calculatorForm">
+        <div class="field pixel">
+            <label for="fats">Enter Your Fats (g)</label>
+            <input id="fats" name="fats"  type="number" min="0" class="m-pixel" placeholder="fats"/>
+          </div>
+          <div class="field pixel">
+            <label for="carbs">Enter Your Carbs (g)</label>
+            <input id="carbs" name="carbs"  type="number" min="0" class="m-pixel" placeholder="carbs"/>
+          </div>
+          <div class="field pixel">
+            <label for="prots">Enter Your Proteins (g)</label>
+            <input id="prots" name="prots"  type="number" min="0" class="m-pixel" placeholder="prots"/>
+          </div>
+          <div class="field pixel">
+            <label for="fibers">Enter Your Fibers (g)</label>
+            <input id="fibers" name="fibers"  type="number" min="0" class="m-pixel" placeholder="fibers"/>
+          </div>
+          <div class="button">
+            <input id="submitButton" type="submit" value="Click to get total calories">
+          </div>
+          <div>
+            <p id="result">
+            </p>
+        </div>
+      </form>
     <script src="index.js"></script>
   </body>
 </html>

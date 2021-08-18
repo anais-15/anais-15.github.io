@@ -1,15 +1,19 @@
-const url = "https://starbuckscalorie.azurewebsites.net/predict/?"
+const url = "https://starbucksfood.azurewebsites.net/predict/?"
+
+
 
 const getCalories = async (url) => {
   const response = await fetch(url);
   const myJson = await response.json();
-  document.getElementById('output').innerHTML = `Calories : ${myJson["message"]} kcal`;
+  document.getElementById('result').innerHTML = `Calories : ${myJson["message"]} kcal`;
 }
+
 
 
 let calculatorForm = document.querySelector("#calculatorForm"),
   formData = new FormData(calculatorForm),
   submitButton = document.querySelector("#submitButton");
+
 
 
 function onSubmit(e) {
@@ -26,7 +30,10 @@ function onSubmit(e) {
   getCalories(finalUrl);
 }
 
+
+
 submitButton.addEventListener("click", onSubmit);
+
 
 
 function serializeArray(form) {
@@ -50,6 +57,8 @@ function serializeArray(form) {
             });
         }
     }
+
+
 
 
 
